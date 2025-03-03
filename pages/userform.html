@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <title>ENI MEMORY</title>
+    <!-- AJOUT SCRIPTS + defer-->
+    <!-- AJOUT CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- AJOUT bibliothèque icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+</head>
+<body>
+    <header>
+        <h1>Le Memory de l'ENI ! <i class="fa-solid fa-dice"></i></h1>
+        
+        <nav> 
+            <span class="navigate"><a href="/index.html">ACCUEIL</a></span>
+            <span class="navigate"><a href="userform.html">S'ENREGISTRER</a></span>
+            <span class="navigate"><a href="login.html">SE CONNECTER</a></span>
+            <span class="navigate"><a href="profile.html">PROFIL</a></span>
+            <span class="navigate"><a href="game.html">JOUER</a></span>
+        </nav>
+
+    </header>
+
+    <main>
+        <form action="" method="get">
+            <h3 class="title"><i class="fa-solid fa-arrow-down"></i> Inscrivez-vous <i class="fa-solid fa-arrow-down"></i></h3>
+            <div class="field">
+                <label for="user">Saisissez un nom d'utilisateur* : </label>
+                <input 
+                    id="user" name="user"
+                    type="text" 
+                    placeholder="3 caractères alphanumériques minimum" 
+                    pattern="^[A-Za-z0-9]{3,}$" 
+                    required 
+                    autofocus
+                >
+                <!-- PATTERN QUI NE FONCTIONNE PAS-->
+            </div>
+
+            <div class="field">
+                <label for="mail">Saisissez une adresse e-mail* : </label>
+                <input 
+                    id="mail" name="mail"
+                    type="email" 
+                    placeholder="votre e-mail" 
+                    required 
+                >
+            </div>
+
+            <div class="field">
+                <label for="pwd">Saisissez un mot de passe* : </label>
+                <input 
+                    id="pwd" name="pwd"
+                    type="password" 
+                    placeholder="Votre mot de passe" 
+                    required 
+                    pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/" 
+                    title="Le mot de passe doit contenir au moins 6 caractères, une majuscule, une minuscule, un chiffre et un symbole (parmi #?!@$%^&*)."
+                >
+            </div>
+
+            <div class="field">
+                <label for="pwdcheck">Confirmez votre mot de passe* : </label>
+                <input 
+                    id="pwdcheck" name="pwdcheck"
+                    type="password" 
+                    placeholder="Votre mot de passe" 
+                    required 
+                    pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/" 
+                    title="Le mode passe saisi doit être identique au mot de passe du champ initial."
+                >
+            </div>
+            <div class="registerBtn">
+                <button>Valider</button>
+                <button>Annuler</button>
+
+            </div>
+        </form>
+
+
+    </main>
+</body>
+
+</html>

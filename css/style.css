@@ -1,0 +1,64 @@
+body {
+    background-color:rgba(47, 79, 79, 0.5) ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+/* **********************HEADER********************* */
+h1 {
+    text-align: center;
+    margin:4vh 0 4vh 0;
+    color: antiquewhite;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border:1px solid black;
+    border-radius: 5px;
+    background-color:darkslategrey;
+    color:antiquewhite
+}
+
+a {
+    text-decoration: none;
+    color:antiquewhite
+}
+
+.navigate {
+    display: inline-block;
+    padding : 2vh 2vw 2vh 2vw;
+}
+
+
+/* **********************INDEX********************* */
+.rules, form{
+    border:1px solid black;
+    border-radius: 5px;
+    background-color:darkslategrey;
+    color:antiquewhite;
+    padding: 2vh 2vw 2vh 2vw;
+    margin-top : 4vh;
+}
+
+/* **********************REGISTRATION********************* */
+/* CSS for global setting of form div common with the rules div in the index*/
+
+.title {
+    text-align: center;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 2vw 2vh 2vw;
+}
+
+.registerBtn {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 5vh;
+}
