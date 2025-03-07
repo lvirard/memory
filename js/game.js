@@ -21,7 +21,7 @@ for (let i=0 ; i<26; i++) {
     alphabet[i]=i;
 };
 const animals = [];
-for (let i=0 ; i<28; i++) {
+for (let i=0 ; i<27; i++) {
     animals[i]=i;
 };
 const animated = [0, 1, 2, 3, 4, 5, 6, 7];
