@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-compatible" content="IE=edge">
     <title>ENI MEMORY</title>
     <!-- AJOUT SCRIPTS + defer-->
+    <script src="/js/login.js" defer></script>
     <!-- AJOUT CSS -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- AJOUT bibliothèque icones -->
@@ -26,5 +27,56 @@
         </nav>
 
     </header>
+
+    <main>
+        <div class="container divConnexion">
+            <div id="divToChange">
+                <h2 id="toChangeOnLogin"></h2>
+                <h3 class="title">Ce n'est pas toi ? </h3>
+                
+            </div>
+            <form action="" method="">
+                <h3 class="title"><i class="fa-solid fa-arrow-down"></i> Connectes-toi <i class="fa-solid fa-arrow-down"></i></h3>
+                <div class="field">
+                    <label for="login">Saisis ton nom d'utilisateur* : </label>
+                    <div class="fieldSet">
+                        <input 
+                            id="login" name="login"
+                            type="text" 
+                            placeholder="Votre login" 
+                            pattern="^[A-Za-z0-9]{3,}$" 
+                            required 
+                            autofocus
+                        >
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="pwd">Saisis ton mot de passe* : </label>
+                    <div class="fieldSet">
+                        <input 
+                            id="pwd" name="pwd"
+                            type="password" 
+                            placeholder="Votre mot de passe" 
+                            required 
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" 
+                            title="Le mot de passe doit contenir au moins 6 caractères, une majuscule, une minuscule, un chiffre et un symbole (parmi @$!%*?&)."
+                        >
+                        <!-- PATTERN QUI NE FONCTIONNE PAS ?-->
+                    </div>
+                </div>
+
+            </form>
+            <div class="registerBtn">
+                <button id="validation">Se connecter</button>
+                <button id="cancel"><a href="/index.html" class="btn">Annuler</a></button>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
 </body>
 </html>

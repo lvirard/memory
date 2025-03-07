@@ -1,0 +1,8 @@
+.check {
+    width:1vw;
+    margin-left:1vw;
+    display:none;
+}
+#validation:hover, #linkToLogin:hover{
+    cursor:not-allowed;
+}

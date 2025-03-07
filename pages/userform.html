@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-compatible" content="IE=edge">
     <title>ENI MEMORY</title>
     <!-- AJOUT SCRIPTS + defer-->
+    <script src="/js/userform.js" defer></script>
     <!-- AJOUT CSS -->
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/userform.css">
     <!-- AJOUT bibliothèque icones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -28,60 +30,75 @@
     </header>
 
     <main>
-        <form action="" method="get">
-            <h3 class="title"><i class="fa-solid fa-arrow-down"></i> Inscrivez-vous <i class="fa-solid fa-arrow-down"></i></h3>
-            <div class="field">
-                <label for="user">Saisissez un nom d'utilisateur* : </label>
-                <input 
-                    id="user" name="user"
-                    type="text" 
-                    placeholder="3 caractères alphanumériques minimum" 
-                    pattern="^[A-Za-z0-9]{3,}$" 
-                    required 
-                    autofocus
-                >
-                <!-- PATTERN QUI NE FONCTIONNE PAS-->
-            </div>
+        <div class="container">
+            <form action="" method="">
+                <h3 class="title"><i class="fa-solid fa-arrow-down"></i> Inscrivez-vous <i class="fa-solid fa-arrow-down"></i></h3>
+                <div class="field">
+                    <label for="login">Saisis un nom d'utilisateur* : </label>
+                    <div class="fieldSet">
+                        <input 
+                            id="login" name="login"
+                            type="text" 
+                            placeholder="3 caractères alphanumériques minimum" 
+                            pattern="^[A-Za-z0-9]{3,}$" 
+                            required 
+                            autofocus
+                        >
+                        <img src="/medias/error.svg" class="check" id="imgLogin" alt="">
+                    </div>
+                </div>
 
-            <div class="field">
-                <label for="mail">Saisissez une adresse e-mail* : </label>
-                <input 
-                    id="mail" name="mail"
-                    type="email" 
-                    placeholder="votre e-mail" 
-                    required 
-                >
-            </div>
+                <div class="field">
+                    <label for="email">Saisis une adresse e-mail* : </label>
+                        <div class="fieldSet">
+                        <input 
+                            id="email" name="email"
+                            type="email" 
+                            placeholder="votre e-mail" 
+                            required 
+                        >
+                        <img src="/medias/error.svg" class="check" id="imgEmail" alt="">
+                    </div>
+                </div>
 
-            <div class="field">
-                <label for="pwd">Saisissez un mot de passe* : </label>
-                <input 
-                    id="pwd" name="pwd"
-                    type="password" 
-                    placeholder="Votre mot de passe" 
-                    required 
-                    pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/" 
-                    title="Le mot de passe doit contenir au moins 6 caractères, une majuscule, une minuscule, un chiffre et un symbole (parmi #?!@$%^&*)."
-                >
-            </div>
+                <div class="field">
+                    <label for="pwd">Saisis un mot de passe* : </label>
+                    <div class="fieldSet">
+                        <input 
+                            id="pwd" name="pwd"
+                            type="password" 
+                            placeholder="Votre mot de passe" 
+                            required 
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" 
+                            title="Le mot de passe doit contenir au moins 6 caractères, une majuscule, une minuscule, un chiffre et un symbole (parmi @$!%*?&)."
+                        >
+                        <!-- PATTERN QUI NE FONCTIONNE PAS ?-->
+                        <img src="/medias/error.svg" class="check" id="imgPwd" alt="">
+                    </div>
+                </div>
 
-            <div class="field">
-                <label for="pwdcheck">Confirmez votre mot de passe* : </label>
-                <input 
-                    id="pwdcheck" name="pwdcheck"
-                    type="password" 
-                    placeholder="Votre mot de passe" 
-                    required 
-                    pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/" 
-                    title="Le mode passe saisi doit être identique au mot de passe du champ initial."
-                >
-            </div>
+                <div class="field">
+                    <label for="pwdcheck">Confirmes ton mot de passe* : </label>
+                    <div class="fieldSet">
+                        <input 
+                            id="pwdcheck" name="pwdcheck"
+                            type="password" 
+                            placeholder="Votre mot de passe" 
+                            required 
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" 
+                            title="Le mode passe saisi doit être identique au mot de passe du champ initial."
+                        >
+                        <!-- PATTERN QUI NE FONCTIONNE PAS ?-->
+                        <img src="/medias/error.svg" class="check" id="imgPwd2" alt="">
+                    </div>
+                </div>
+            </form>
             <div class="registerBtn">
-                <button>Valider</button>
-                <button>Annuler</button>
-
+                <button id="validation" disabled>Valider</button>
+                <button id="cancel"><a href="/index.html" class="btn">Annuler</a></button>
             </div>
-        </form>
+
+        </div>
 
 
     </main>

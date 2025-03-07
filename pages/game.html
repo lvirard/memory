@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-compatible" content="IE=edge">
     <title>ENI MEMORY</title>
     <!-- AJOUT SCRIPTS + defer-->
+     <script src="/js/game.js" defer></script>
     <!-- AJOUT CSS -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- AJOUT bibliothèque icones -->
@@ -24,7 +25,85 @@
             <span class="navigate"><a href="profile.html">PROFIL</a></span>
             <span class="navigate"><a href="game.html">JOUER</a></span>
         </nav>
-
     </header>
+    <main>
+        <div class="container">
+            <div class="bestScores">
+                <!-- <h2>Meilleurs scores</h2> -->
+                <!-- AJOUT TABLEAU-->
+            </div>
+
+            <div>
+                <p class="rules">Tente de gagner avec le moins d'essais possibles !</p>
+                <p class="rules">Pour relancer le jeu, appuie sur la <strong>barre d'espace</strong>.</p>
+                <p class="rules" id="counter">Nombre de coups : 0</p>
+            </div>
+
+            <div class="game">
+                <table>
+                    <tr>
+                        <td><img class="gameimg" id="0" ></td>
+                        <td><img class="gameimg" id="1" ></td>
+                        <td><img class="gameimg" id="2" ></td>
+                        <td><img class="gameimg" id="3" ></td>
+                    </tr>
+                    <tr>
+                        <td><img class="gameimg" id="4"></td>
+                        <td><img class="gameimg" id="5"></td>
+                        <td><img class="gameimg" id="6"></td>
+                        <td><img class="gameimg" id="7"></td>
+                    </tr>
+                    <tr id="adjustRaw">
+                        <td><img class="gameimg" id="8"></td>
+                        <td><img class="gameimg" id="9"></td>
+                        <td><img class="gameimg" id="10"></td>
+                        <td><img class="gameimg" id="11"></td>
+                    </tr>
+                </table>
+                <!-- GRID à gérer via le script-->
+            </div>
+            <div class="field">
+                <label for="memoryChoice">Changer d'images ? </label>
+                <div class="fieldSet">
+                    <select id="memoryChoice" name="memoryChoice" >
+                        <option value="">--Choisir une option--</option>
+                        <option value="alphabet">Lettres de l'alphabet en version Scrabble</option>
+                        <option value="animals">Animaux</option>
+                        <option value="animated">Animaux animés</option>
+                        <option value="domestics">Animaux domestiques</option>
+                        <option value="dogs">Chiens</option>
+                        <option value="dinosaurs">Dinausores</option>
+                        <option value="labeledDinosaurs">Dinausores avec leurs noms</option>
+                        <option value="vegetables">Légumes</option>
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <label for="memorySize">Changer la taille ?</label>
+                <div class="fieldSet">
+                    <select id="memorySize" name="memorySize">
+                        <option value="">--Please choose an option--</option>
+                        <option value="12">3x4</option>
+                        <option value="8">2x4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="registerBtn">
+                <button id="validation">Let's play !</button>
+            </div>
+
+            <div class="lastScores">
+                <!-- <h2>Tes derniers scores</h2> -->
+                <!-- AJOUT TABLEAU -->
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </main>
 </body>
 </html>

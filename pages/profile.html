@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-compatible" content="IE=edge">
     <title>ENI MEMORY</title>
     <!-- AJOUT SCRIPTS + defer-->
+     <script src="/js/profile.js" defer></script>
     <!-- AJOUT CSS -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- AJOUT bibliothèque icones -->
@@ -26,6 +27,73 @@
         </nav>
 
     </header>
+    <main>
+        <div class="container">
+            <div id="actualUser">
+                <h2 id="toChangeOnLogin">Salut !</h2>
+                <h3 class="title">Ce n'est pas toi ? Retourne te <a href="login.html">te connecter</a> !</h3>
+                
+            </div>
+            <h3>Ton profil :</h3>
+            <div>
 
+                <div class="field">
+                    <label for="login">Ton login : </label>
+                    <div class="fieldSet">
+                        <input 
+                            id="login" name="login"
+                            type="text" 
+                            disabled
+                        >
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="email">Ton e-mail : </label>
+                        <div class="fieldSet">
+                        <input 
+                            id="email" name="email"
+                            type="email"
+                            disabled
+                        >
+                    </div>
+                </div>
+                <form action="" method="">
+
+
+                    <div class="field">
+                        <label for="memoryChoice">Avec quel type d'images souhaites-tu jouer ? </label>
+                        <div class="fieldSet">
+                            <select id="memoryChoice" name="memoryChoice" >
+                                <option value="">--Choisir une option--</option>
+                                <option value="alphabet">Lettres de l'alphabet en version Scrabble</option>
+                                <option value="animals">Animaux</option>
+                                <option value="animated">Animaux animés</option>
+                                <option value="domestics">Animaux domestiques</option>
+                                <option value="dogs">Chiens</option>
+                                <option value="dinosaurs">Dinausores</option>
+                                <option value="labeledDinosaurs">Dinausores avec leurs noms</option>
+                                <option value="vegetables">Légumes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="memorySize">Taille du mémory :</label>
+                        <div class="fieldSet">
+                            <select id="memorySize" name="memorySize">
+                                <option value="">--Please choose an option--</option>
+                                <option value="12">3x4</option>
+                                <option value="8">2x4</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                </form>
+                <div class="registerBtn">
+                    <button id="validation">Let's play !</button>
+                </div>
+        </div>
+    </main>
 </body>
 </html>
