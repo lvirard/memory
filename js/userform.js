@@ -163,10 +163,11 @@ function testAll(){
     }
 }
 
+
 // --------------- Enregistrement des saisies  ---------------
 let users = [] ; // Tableau de donnée des utilisateurs à compléter au fur et à mesure 
 const localUsers = localStorage.getItem('users') ; // Récupération infos du LocalStorage
-users = JSON.parse(localUsers) ; //Infos sous forme de tableau manipulable.
+
 
 function registerUser(){
     
@@ -179,9 +180,11 @@ function registerUser(){
         newUser = {user: index, id: login.value, mail: email.value, password: pwd.value};
         users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
+        window.location.assign('login.html')
     }
     //3. Si des données existent, 
     else {
+        users = JSON.parse(localUsers) ; //Infos sous forme de tableau manipulable.
         //3.0 Vérifier que l'utilisateur ou l'email saisi ne sont pas déjà utilisé.
         //Recherche l'utilisateur :
         let foundUser = null;
@@ -200,9 +203,10 @@ function registerUser(){
             }
         }
         //Si l'utilisateur n'existe pas : 
+        //4.0 Convertir les données du JSON en tableau avec JSON.parse()
+        //4.1 récupérer le nombre du dernier utilisateur enregistré
         //4.2 ajouter le nouvel utilisateur avec la clé n+1
         //enregistrer le tableau au format JSON dans le local storage.
-        //changer de fenêtre
         if (!foundUser ||  !foundEmail){
             index= users.length +1;
             newUser = {user: index, id: login.value, mail: email.value, password: pwd.value}
@@ -227,7 +231,6 @@ function init(){
     login.addEventListener('input', testAll)
     validation.addEventListener('click', function(){
         registerUser();  
-
     })
 }
 

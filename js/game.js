@@ -192,7 +192,7 @@ function compare(){
                 document.getElementById(`${oddIndex}`).src="/medias/question.svg";
                 document.getElementById(`${evenIndex}`).src="/medias/question.svg";
                 document.querySelector('.game').classList.remove('noClick') // remet les clicks
-            }, 5000)
+            }, 2000)
         }
     } 
 }
