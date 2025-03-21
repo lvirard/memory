@@ -77,12 +77,12 @@ function testPwd (){
      
     if(size6Bool  && containsSymbolBool  && containsMajBool  && containsNumberBool  && containsMinBool ){  
         imgPwd.style.display = "inline-block" ; //Rend visible l'image
-        imgPwd.src = "./medias/check.svg" //Change l'image "check" lorsque tout est OK
+        imgPwd.src = "../medias/check.svg" //Change l'image "check" lorsque tout est OK
         return true
     } 
     ////TODO: utiliser cett efonction dans testAll - il faudra alors rajouter un else if comme dans pwdsEquals pour ne pas afficher l'image lorsqu'on modifie un autre champ
     else {
-        imgPwd.src = "./medias/error.svg" ; //Rend visible l'image
+        imgPwd.src = "../medias/error.svg" ; //Rend visible l'image
         imgPwd.style.display = "inline-block" ; //remet l'image "error" si les conditions ne sont pas remplies
         return false
     }
@@ -92,14 +92,14 @@ function testPwd (){
 function pwdsEquals() {
     if (pwd.value == pwd2.value && pwd.value!="") {
         imgPwd2.style.display = "inline-block" ; //Rend visible l'image    
-        imgPwd2.src = "./medias/check.svg" //Change l'image "check" lorsque tout est OK
+        imgPwd2.src = "../medias/check.svg" //Change l'image "check" lorsque tout est OK
         return true
     }
     else if (pwd2.value==""){ //permet de ne pas afficher l'image lorsqu'on modifie un autre champ
         return false
     }
     else {
-        imgPwd2.src = "./medias/error.svg" ; //remet l'image "error" si les conditions ne sont pas remplies
+        imgPwd2.src = "../medias/error.svg" ; //remet l'image "error" si les conditions ne sont pas remplies
         imgPwd2.style.display = "inline-block" ;  //Rend visible l'image
         return false
     }
@@ -109,14 +109,14 @@ function testLogin(){
     if (login.value.match(/[A-Za-z0-9]/) &&
         login.value.length >= 3) {
             imgLogin.style.display = "inline-block" ;   //Rend visible l'image   
-            imgLogin.src = "./medias/check.svg" //Change l'image "check" lorsque tout est OK
+            imgLogin.src = "../medias/check.svg" //Change l'image "check" lorsque tout est OK
             return true
         }
     else if (login.value==""){ //permet de ne pas afficher l'image lorsqu'on modifie un autre champ
         return false
     }
     else {
-        imgLogin.src = "./medias/error.svg" ; //remet l'image "error" si les conditions ne sont pas remplies
+        imgLogin.src = "../medias/error.svg" ; //remet l'image "error" si les conditions ne sont pas remplies
         imgLogin.style.display = "inline-block" ;//Rend visible l'image
         return false
     }
@@ -127,14 +127,14 @@ function testEmail() {
     let isTrue = email.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)
     if (isTrue) {
         imgEmail.style.display = "inline-block" ;     //Rend visible l'image 
-        imgEmail.src = "./medias/check.svg" //Change l'image "check" lorsque tout est OK
+        imgEmail.src = "../medias/check.svg" //Change l'image "check" lorsque tout est OK
         return true
     }
     else if (email.value==""){ //permet de ne pas afficher l'image lorsqu'on modifie un autre champ
         return false
     }
     else {
-        imgEmail.src = "./medias/error.svg" ; //remet l'image "error" si les conditions ne sont pas remplies
+        imgEmail.src = "../medias/error.svg" ; //remet l'image "error" si les conditions ne sont pas remplies
         imgEmail.style.display = "inline-block" ; //Rend visible l'image
         return false
     }
