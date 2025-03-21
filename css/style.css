@@ -45,7 +45,7 @@ a {
     margin-top : 4vh;
 }
 
-/* **********************INDEX ********************* */
+/* **********************INDEX & PROFILE - IMG MANAGER ********************* */
 
 .imgWelcome {
     display: flex;
@@ -54,6 +54,19 @@ a {
     margin: auto;
 }
 
+.displayImg{
+    width: 30vw;
+}
+
+@media screen and (max-width: 700px) {
+    .displayImg{
+        width: 60vw;
+    }
+}
+
+#imagesGrid {
+    display:none;
+}
 /* **********************REGISTRATION & LOGIN ********************* */
 /* CSS for global setting of form div common with the rules div in the index*/
 
@@ -116,10 +129,7 @@ h2 {
     text-align: center;
 }
 /* **********************PROFILE************************ */
-#imagesGrid {
-    display:none;
-    width: 30vw;
-}
+
 
 /* **********************GAME********************* */
 .rules {

@@ -7,16 +7,14 @@ The minimal requierments were to :
 - develop an algorithm to handle a 1 user gameplay - a memory (with the image files already given) or another game of our choice
 
 I started the project by getting a frame for all my pages with html & CSS. 
-Then I focused on the system with JS to register some users in the local storage ant to login. 
-The third step was to develop a efficient game.
-I finally manage to set up some criteria that the user can choose to play and increment them into my  game. 
+Then I focused on the system with JS to register some users in the local storage and to login. 
+The third step was to develop an efficient game.
+I finally manage to set up some criterias that the user can choose to play and increment them into my game. 
 
 In a week, I did not had the time to finish everything. (It was my second week of javascript!)
-TO DO : 
-- security : encrypt the password for it to be hidden in the local storage
-- add a system to show the strongness of the password
-- secure the CSS and the responsivity of the game and the navbar
-- add a scoring system & display it.
 
-WARNING :
-- check the paths of the differents files on github.
+TO DO : 
+- !Mandatory / security : encrypt the password for it to be hidden in the local storage
+- add a system to show the strongness of the password
+- add a scoring system & display it.
+- remove the option of clicking on an image already found. 
