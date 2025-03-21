@@ -90,7 +90,7 @@ function alreadyLogged (){
 function displayGrid(){
     const adjustRaw = document.getElementById("adjustRaw");
     for (let i=0; i<cases; i++){
-        images[i].src="/medias/question.svg";
+        images[i].src="./medias/question.svg";
     }
     if (cases==8) {
         adjustRaw.style.display="none";
@@ -135,28 +135,28 @@ function afficherImage(image, index) { // element : se réfère à l'élément c
     const imageIndex = imgPosition[index];  // Récupérer l'image correspondante dans le tableau créé dans setPositions
     switch (array) {
         case vegetables:
-            imagePath = `/medias/vegetables/${imageIndex}.svg`;  
+            imagePath = `./medias/vegetables/${imageIndex}.svg`;  
             break;
         case alphabet:
-            imagePath = `/medias/alphabet/${imageIndex}.png`;  
+            imagePath = `./medias/alphabet/${imageIndex}.png`;  
             break;
         case animals:
-            imagePath = `/medias/animals/${imageIndex}.webp`;  
+            imagePath = `./medias/animals/${imageIndex}.webp`;  
             break;
         case animated:
-            imagePath = `/medias/animated/${imageIndex}.webp`;  
+            imagePath = `./medias/animated/${imageIndex}.webp`;  
             break;    
         case dogs:
-            imagePath = `/medias/dogs/${imageIndex}.webp`;  
+            imagePath = `./medias/dogs/${imageIndex}.webp`;  
             break;
         case domestics:
-            imagePath = `/medias/domestics/${imageIndex}.jpg`;  
+            imagePath = `./medias/domestics/${imageIndex}.jpg`;  
             break;
         case dinosaurs:
-            imagePath = `/medias/dinosaurs/${imageIndex}.jpg`;  
+            imagePath = `./medias/dinosaurs/${imageIndex}.jpg`;  
             break;
         case labeledDinosaurs:
-            imagePath = `/medias/labeledDinosaurs/${imageIndex}.jpg`;  
+            imagePath = `./medias/labeledDinosaurs/${imageIndex}.jpg`;  
             break;       
     } 
     image.src = imagePath;  // Modifier le src de l'image affichée
@@ -189,8 +189,8 @@ function compare(){
             //Attendre 5 secondes (5000ms) et remettre les sources des deux dernières images à 0. Pendant ce temps là, empêcher les clicks
             document.querySelector('.game').classList.add('noClick'); // empêche les clicks
             setTimeout(function (){
-                document.getElementById(`${oddIndex}`).src="/medias/question.svg";
-                document.getElementById(`${evenIndex}`).src="/medias/question.svg";
+                document.getElementById(`${oddIndex}`).src="./medias/question.svg";
+                document.getElementById(`${evenIndex}`).src="./medias/question.svg";
                 document.querySelector('.game').classList.remove('noClick') // remet les clicks
             }, 2000)
         }
