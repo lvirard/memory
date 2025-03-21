@@ -98,6 +98,7 @@ function displayGrid(){
     else {
         adjustRaw.style.display="table-row";
     }
+    
 }
 
 //Fonction pour mélanger la position des images.
@@ -240,6 +241,7 @@ function init(){
           displayGrid();
           setPositions();
           counter = 0;
+          counterDisplay.textContent = `Nombre de coups : ${Math.floor(counter/2)}`;
         }
     }); 
     //Appel des fonctions count, afficherImage, compare et win au click sur une image.

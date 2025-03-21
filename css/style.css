@@ -115,6 +115,11 @@ input, select {
 h2 {
     text-align: center;
 }
+/* **********************PROFILE************************ */
+#imagesGrid {
+    display:none;
+    width: 30vw;
+}
 
 /* **********************GAME********************* */
 .rules {

@@ -4,6 +4,7 @@ const actualUser = localStorage.getItem('actualUser'); // Récup info utilisateu
 const validation = document.getElementById('validation'); //bouton valider
 const memoryChoice = document.getElementById('memoryChoice') ;
 const memorySize = document.getElementById('memorySize');
+const imagesGrid = document.getElementById('imagesGrid');
 
 
 // --------------- FONCTIONS ---------------
@@ -48,6 +49,43 @@ function designMemory(){
     localStorage.setItem('localDesign', JSON.stringify(newDesign));
 }
 
+//Fonction pour afficher le tables d'images en fonction de la sélection.
+function displayImagesGrid() {
+    if (memoryChoice.value!="option") {
+        imagesGrid.style.display="inline-block";
+        if(memoryChoice.value=="alphabet") {
+            imagesGrid.src= "../medias/alphabet/memory_detail_scrabble.png" ;
+        }
+        else if (memoryChoice.value=="animals") {
+            imagesGrid.src= "../medias/animals/memory_detail_animaux.png" ;
+        }
+        else if (memoryChoice.value=="animated") {
+            imagesGrid.src= "../medias/animated/memory_detail_animaux_animes.png" ;
+        }
+        else if (memoryChoice.value=="domestics") {
+            imagesGrid.src= "../medias/domestics/memory_detail_animaux_domestiques.png" ;
+        }
+        else if (memoryChoice.value=="dogs") {
+            imagesGrid.src= "../medias/dogs/memory_details_chiens.png" ;
+        }
+        else if (memoryChoice.value=="dinosaurs") {
+            imagesGrid.src= "../medias/dinosaurs/memory_detail_dinosaures.png" ;
+        }
+        else if (memoryChoice.value=="labeledDinosaurs") {
+            imagesGrid.src= "../medias/labeledDinosaurs/memory_details_dinosaures_avec_nom.png" ;
+        }
+        else if (memoryChoice.value=="vegetables") {
+            imagesGrid.src= "../medias/vegetables/memory_detail.png" ;
+        }
+    }
+    else {
+        imagesGrid.style.display="none";
+    }
+
+    
+
+
+}
 
 //----------------- Initialisation de la page ------------------
 function init () {
@@ -57,6 +95,7 @@ function init () {
         designMemory();
         window.location.assign('game.html');
     });
+    memoryChoice.addEventListener('change',displayImagesGrid);
 }
 
 window.onload = init ;
